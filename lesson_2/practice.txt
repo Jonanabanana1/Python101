@@ -1,0 +1,27 @@
+Keyword 	Meaning
+START 	start of the program
+SET 	set a variable that we can use for later
+GET 	retrieve input from user
+PRINT 	display output to user
+READ 	retrieve a value from a variable
+IF/ELSE IF/ELSE 	show conditional branches in logic
+WHILE 	show looping logic
+END 	end of the program
+
+# a function that takes a list of integers, and returns a new list with every other element from the original list, starting with the first element. 
+
+START
+GET number_list_1
+GET number_list_2
+SET total_size = length of number_list_1 * 2 #list 1 and list 2 have same size
+SET merged_list = new empty list with size total_size
+SET iterator_1 = 0 
+SET iterator_2 = 1
+WHILE iterator_1 < total_size
+    SET value in merged_list at iterator_1 = value in number_list_1 at iterator_1
+    iterator_1 = iterator_1 + 2
+WHILE iterator_2 < total_size
+    SET value in merged_list at iterator_2 = value in number_list_2 at iterator_2
+    iterator_2 = iterator_2 + 2
+PRINT merged_list
+END
