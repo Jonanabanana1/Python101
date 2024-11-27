@@ -1,0 +1,26 @@
+{
+  "en": {
+    "welcome": "Welcome to Calculator!",
+    "ask_first_number": "What's the first number?",
+    "ask_second_number": "What's the second number?",
+    "ask_operation": "What operation would you like to perform?\n1: Addition  2: Subtraction\n3: Multiplication  4: Division",
+    "error_number": "Error, please input a valid number",
+    "error_number_list": "Error, please input a number between 1-4",
+    "output": "The output is ",
+    "ask_retry": "Would you like to perform another calculation? y or n",
+    "error_retry": "Please input y for yes or n for no"
+  },
+  
+  "spa": {
+    "welcome": "¡Bienvenido a Calculadora!",
+    "ask_first_number": "¿Cuál es el primer número?",
+    "ask_second_number": "¿Cuál es el segundo número?",
+    "ask_operation": "¿Qué operación te gustaría realizar?\n1: Suma 2: Resta\n3: Multiplicación 4: División",
+    "error_number": "Error, por favor ingresa un número válido",
+    "error_number_list": "Error, ingresa un número entre 1-4",
+    "output": "La salida es",
+    "ask_retry": "¿Le gustaría realizar otro cálculo? y o n",
+    "error_retry": "Por favor ingrese y para sí o n para no"
+  }
+  
+}
