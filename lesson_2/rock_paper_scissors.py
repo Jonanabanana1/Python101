@@ -11,7 +11,6 @@ POSSIBLE_WINS = {
 
 
 def display_result(local_choice, local_computer_choice):
-
     if is_winner(local_choice, local_computer_choice):
         prompt(f'You win! {local_choice} beats {computer_choice}')
     elif is_winner(computer_choice, local_choice):
@@ -56,12 +55,10 @@ def get_user_choice():
 
         prefixes.append(prefix)
         prefix_dictionary[prefix] = item
-    
+
     prompt(f"Choose one: {', '.join(VALID_CHOICES)}")
     prompt(f"Short command: {', '.join(prefixes)}")
     user_choice = input().lower()
-
-   
 
     while user_choice not in prefixes and user_choice not in VALID_CHOICES:
         prompt(f"Please pick a valid choice: {', '.join(VALID_CHOICES)}")
@@ -76,7 +73,7 @@ def get_user_choice():
 prompt(f'Welcome to {"-".join(VALID_CHOICES).title()}')
 player_score = 0
 computer_score = 0
-
+keep_playing = True
 while True:
     player_choice = get_user_choice()
     computer_choice = random.choice(VALID_CHOICES)
@@ -104,11 +101,17 @@ while True:
     retry = input().lower()
 
     while True:
-        if retry.startswith('y') or retry.startswith('n'):
-            break
-        prompt('Please enter a valid response: (y/n)')
-        retry = input().lower()
+        match retry:
+            case 'y' | 'yes':
+                keep_playing = True
+                break
+            case 'n' | 'no':
+                keep_playing = False
+                break
+            case _:
+                prompt('Please enter a valid response: (y/n)')
+                retry = input().lower()
 
-    if retry.startswith('n'):
+    if not keep_playing:
         prompt('Thanks for playing!')
         break
